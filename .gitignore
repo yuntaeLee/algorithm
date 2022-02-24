@@ -8,4 +8,5 @@ bin/
 
 .project
 
-/C:\Users\82104\Algorithm\BOJ\src
+!/src/
+/src/*
