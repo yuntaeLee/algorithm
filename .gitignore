@@ -7,6 +7,3 @@ bin/
 .classpath
 
 .project
-
-!/BOJ/src/
-/BOJ/src/*
