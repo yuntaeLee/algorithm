@@ -8,5 +8,5 @@ bin/
 
 .project
 
-!/src/
-/src/*
+!/BOJ/src/
+/BOJ/src/*
