@@ -32,11 +32,6 @@ public class N1149_2 {
 			cost[i][BLUE] += Math.min(cost[i - 1][RED], cost[i - 1][GREEN]);
 		}
 		
-		for (int[] arr : cost) {
-			for (int i : arr) System.out.print(i + " ");
-			System.out.println();
-		}
-		
 		System.out.println(Math.min(cost[N - 1][RED], Math.min(cost[N - 1][GREEN], cost[N - 1][BLUE])));
 	}
 
