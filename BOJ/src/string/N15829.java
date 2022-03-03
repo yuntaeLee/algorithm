@@ -22,7 +22,6 @@ public class N15829 {
 		}
 		
 		System.out.println(hash % m);
-		
 	}
 
 }
