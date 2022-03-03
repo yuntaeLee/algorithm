@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-import java.util.concurrent.RecursiveAction;
 
 public class N1912_2 {
 
@@ -45,5 +44,4 @@ public class N1912_2 {
 		
 		return dp[n];
 	}
-
 }
