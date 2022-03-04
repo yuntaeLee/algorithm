@@ -40,7 +40,7 @@ public class N1920 {
 	
 	static int binarySearch(int[] arr, int key) {
 		
-		int lo = 0;// 탐색 범위의 왼쪽 끝 인덱스
+		int lo = 0; // 탐색 범위의 왼쪽 끝 인덱스
 		int hi = arr.length - 1; // 탐색 범위의 오른쪽 끝 인덱스
 		
 		while (lo <= hi) {
