@@ -3,7 +3,7 @@ package level2;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class TruckCrossingTheBrdge {
+public class TruckCrossingTheBridge {
 	
 	public int solution(int bridge_length, int weight, int[] truck_weights) {
 		int answer = 0;
@@ -41,10 +41,10 @@ public class TruckCrossingTheBrdge {
                     }
                 }
             }
-        }
+    	}
         
         return answer + bridge_length;
-   }
+	}
 	   
 	public static void main(String[] args) {
 		
