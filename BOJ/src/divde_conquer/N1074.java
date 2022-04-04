@@ -16,15 +16,31 @@ public class N1074 {
 		int N = Integer.parseInt(st.nextToken());
 		int r = Integer.parseInt(st.nextToken());
 		int c = Integer.parseInt(st.nextToken());
-		int size = (int) Math.pow(2, N); // 한 번의 크기
+		int n = (int) Math.pow(2, N); // 한 번의 크기
 		
-		find(size, r, c);
-		
+		solution(r, c, n);
 		System.out.println(count);
 	}
 	
-	static void find(int size, int r, int c) {
+	static void solution(int r, int c, int n) {
+		if (n == 1) return;
 		
+		int nn = n / 2;
+		
+		if (r < nn && c < nn) {
+			solution(r, c, nn);
+		}
+		else if (r < nn && c >= nn) {
+			count += n * n / 4;
+			solution(r, c - nn, nn);
+		}
+		else if (r >= nn && c < nn) {
+			count += (n * n / 4) * 2;
+			solution(r - nn, c, nn);
+		}
+		else {
+			count += (n * n / 4) * 3;
+			solution(r - nn, c - nn, nn);
+		}
 	}
-
 }
