@@ -65,13 +65,10 @@ public class N1197 {
 		int size = pq.size();
 		
 		for (int i = 0; i < size; i++) {
-			
 			Node node = pq.poll();
-			int to = find(node.to);
-			int from = find(node.from);
 			
 			// 사이클이 발생하지 않는 경우 그래프에 포함
-			if(!isSameParent(to, from)) {
+			if(!isSameParent(node.to, node.from)) {
 				ans += node.distance;
 				union(node.to, node.from);
 			}
