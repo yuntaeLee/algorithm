@@ -71,7 +71,7 @@ public class N1991 {
 		
 		// 전위순회: 루트 -> 좌 -> 우
 		void preOrder(Node root) {
-			sb.append(root.data); // 먼저 가운데 출력
+			sb.append(root.data); // 먼저 자신 출력
 			if (root.left != null) preOrder(root.left); // 그 다음 왼쪽
 			if (root.right != null) preOrder(root.right); // 마지막 오른쪽
 		}
@@ -79,7 +79,7 @@ public class N1991 {
 		// 중위순회: 좌 -> 루트 -> 우
 		void inOrder(Node root) {
 			if (root.left != null) inOrder(root.left); // 왼쪽 먼저
-			sb.append(root.data); // 그 다음 중앙 출력
+			sb.append(root.data); // 그 다음 자신 출력
 			if (root.right != null) inOrder(root.right); // 마지막으로 오른쪽
 		}
 		
