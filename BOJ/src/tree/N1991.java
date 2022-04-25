@@ -70,23 +70,23 @@ public class N1991 {
 		}
 		
 		// 전위순회: 루트 -> 좌 -> 우
-		void preOrder(Node root) {
+		void preorder(Node root) {
 			sb.append(root.data); // 먼저 자신 출력
-			if (root.left != null) preOrder(root.left); // 그 다음 왼쪽
-			if (root.right != null) preOrder(root.right); // 마지막 오른쪽
+			if (root.left != null) preorder(root.left); // 그 다음 왼쪽
+			if (root.right != null) preorder(root.right); // 마지막 오른쪽
 		}
 		
 		// 중위순회: 좌 -> 루트 -> 우
-		void inOrder(Node root) {
-			if (root.left != null) inOrder(root.left); // 왼쪽 먼저
+		void inorder(Node root) {
+			if (root.left != null) inorder(root.left); // 왼쪽 먼저
 			sb.append(root.data); // 그 다음 자신 출력
-			if (root.right != null) inOrder(root.right); // 마지막으로 오른쪽
+			if (root.right != null) inorder(root.right); // 마지막으로 오른쪽
 		}
 		
 		// 후위순회: 좌 -> 우 -> 루트
-		void postOrder(Node root) {
-			if (root.left != null) postOrder(root.left); // 왼쪽 먼저
-			if (root.right != null) postOrder(root.right); // 그 다음 오른쪽
+		void postorder(Node root) {
+			if (root.left != null) postorder(root.left); // 왼쪽 먼저
+			if (root.right != null) postorder(root.right); // 그 다음 오른쪽
 			sb.append(root.data);
 		}
 		
@@ -104,17 +104,17 @@ public class N1991 {
 		}
 		
 		// 전위 순회
-		tree.preOrder(tree.root);
+		tree.preorder(tree.root);
 		System.out.println(sb);
 		sb.setLength(0);
 		
 		// 중위 순회
-		tree.inOrder(tree.root);
+		tree.inorder(tree.root);
 		System.out.println(sb);
 		sb.setLength(0);
 		
 		// 후위 순회
-		tree.postOrder(tree.root);
+		tree.postorder(tree.root);
 		System.out.println(sb);
 	}
 }
