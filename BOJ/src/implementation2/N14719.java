@@ -46,5 +46,4 @@ public class N14719 {
 		
 		System.out.println(ans);
 	}
-
 }
