@@ -3,29 +3,27 @@ package graph2;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.LinkedList;
+import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class N16236 {
 	
+	static int size = 2;
 	static int time;
 	static int eat;
-	static int size = 2;
 	
 	static int sx;
 	static int sy;
 	
 	static int N;
-	
 	static int[][] map;
 	
 	static int[] dx = {-1, 0, 1, 0};
 	static int[] dy = {0, -1, 0, 1};
 	
-	static ArrayList<Node> fishes;
+	static PriorityQueue<Node> fishes;
 	
 	static class Node implements Comparable<Node>{
 		int x;
@@ -70,7 +68,7 @@ public class N16236 {
 		}
 		
 		while (true) {
-			fishes = new ArrayList<>();
+			fishes = new PriorityQueue<>();
 			
 			bfs(sx, sy);
 			
@@ -79,20 +77,18 @@ public class N16236 {
 				return;
 			}
 			
-			Collections.sort(fishes);
+			Node fish = fishes.poll();
 			
-			Node eatingFish = fishes.get(0);
-			
-			time += eatingFish.dist;
+			time += fish.dist;
 			eat++;
 			
-			map[eatingFish.x][eatingFish.y] = 0;
-			sx = eatingFish.x;
-			sy = eatingFish.y;
+			map[fish.x][fish.y] = 0;
+			sx = fish.x;
+			sy = fish.y;
 			
 			if (eat == size) {
-				size++;
 				eat = 0;
+				size++;
 			}
 		}
 		
@@ -115,7 +111,7 @@ public class N16236 {
 				if (isInArea(nx, ny) && isMovable(nx, ny) && !visited[nx][ny]) {
 					
 					if (isEatable(nx, ny)) {
-						fishes.add(new Node(nx, ny, cur.dist + 1));
+						fishes.offer(new Node(nx, ny, cur.dist + 1));
 					}
 					
 					q.offer(new Node(nx, ny, cur.dist + 1));
@@ -125,16 +121,16 @@ public class N16236 {
 		}
 	}
 	
+	static boolean isInArea(int x, int y) {
+		return x >= 0 && y >= 0 && x < N && y < N;
+	}
+	
 	static boolean isMovable(int x, int y) {
 		return map[x][y] <= size;
 	}
 	
 	static boolean isEatable(int x, int y) {
 		return map[x][y] != 0 && map[x][y] < size;
-	}
-	
-	static boolean isInArea(int x, int y) {
-		return x >= 0 && y >= 0 && x < N && y < N;
 	}
 
 }
