@@ -57,8 +57,8 @@ public class N1238 {
 			reverseList.get(b).add(new Node(a, t));
 		}
 		
-		int[] dist = dijstra(X, list);
-		int[] reverseDist = dijstra(X, reverseList);
+		int[] dist = dijkstra(X, list);
+		int[] reverseDist = dijkstra(X, reverseList);
 		
 		int ans = 0;
 		
@@ -69,7 +69,7 @@ public class N1238 {
 		System.out.println(ans);
 	}
 	
-	static int[] dijstra(int start, ArrayList<ArrayList<Node>> list) {
+	static int[] dijkstra(int start, ArrayList<ArrayList<Node>> list) {
 		PriorityQueue<Node> pq = new PriorityQueue<>();
 		pq.offer(new Node(start, 0));
 		
