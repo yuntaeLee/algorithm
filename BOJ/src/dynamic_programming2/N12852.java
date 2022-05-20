@@ -30,7 +30,6 @@ public class N12852 {
 					dp[i] = dp[i / 2] + 1;
 					trace[i] = i / 2;
 				}
-				
 			}	
 		}
 		
