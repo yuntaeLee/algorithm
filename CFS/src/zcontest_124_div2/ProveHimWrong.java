@@ -1,4 +1,4 @@
-package round124div2;
+package zcontest_124_div2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
