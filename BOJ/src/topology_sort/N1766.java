@@ -4,14 +4,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
 public class N1766 {
 	
-	static int N; // 정점 수
-	static int M; // 간선 수
+	static int N;
+	static int M;
 	
 	static int[] inDegree;
 	
