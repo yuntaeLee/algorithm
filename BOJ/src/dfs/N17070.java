@@ -67,5 +67,4 @@ public class N17070 {
 			dfs(x + 1, y + 1, 2);
 		}
 	}
-
 }
