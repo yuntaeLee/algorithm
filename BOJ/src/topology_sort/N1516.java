@@ -30,10 +30,10 @@ public class N1516 {
 	static Building[] buildings;
 	
 	static ArrayList<ArrayList<Integer>> list = new ArrayList<>();
-	static StringBuilder sb = new StringBuilder();
 	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
 		StringTokenizer st;
 		
 		N = Integer.parseInt(br.readLine());
@@ -91,5 +91,4 @@ public class N1516 {
 			}
 		}
 	}
-
 }
