@@ -67,13 +67,14 @@ public class N2146_R {
 					int ny = y + dy[d];
 					
 					if (outOfArea(nx, ny)) continue;
-					if (map[nx][ny] == 0) {
+					
+					if (map[nx][ny] == 0) { // 바다면 다리를 놓음
 						map[nx][ny] = map[x][y];
-						len[nx][ny] = depth;
+						len[nx][ny] = depth; // 다리 길이 입력
 						q.offer(new int[] {nx, ny});
 					}
 					
-					else if (map[nx][ny] != map[x][y]) {
+					else if (map[nx][ny] != map[x][y]) { // 다른 섬의 코드면 연결되는 것
 						if (ans > len[nx][ny] + len[x][y]) {
 							ans = len[nx][ny] + len[x][y];
 							flag = true;
