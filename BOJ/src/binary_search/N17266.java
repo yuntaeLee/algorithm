@@ -16,7 +16,6 @@ public class N17266 {
 		int[] lamps = new int[M];
 		
 		st = new StringTokenizer(br.readLine());
-		
 		for (int i = 0; i < M; i++) {
 			lamps[i] = Integer.parseInt(st.nextToken()); 
 		}
