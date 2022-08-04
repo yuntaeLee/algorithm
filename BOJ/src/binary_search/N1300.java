@@ -29,4 +29,5 @@ public class N1300 {
 		
 		System.out.println(lo);
 	}
+	
 }
