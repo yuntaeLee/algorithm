@@ -82,5 +82,4 @@ public class N1647 {
 		
 		if (x != y) parent[y] = x;
 	}
-
 }
