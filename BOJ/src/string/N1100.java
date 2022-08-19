@@ -13,11 +13,10 @@ public class N1100 {
 		for (int i = 0; i < 8; i++) {
 			String s = br.readLine();
 			for (int j = 0; j < 8; j++) {
-				if ((i + j) % 2 == 0 && s.charAt(j) == 'F') ans++; 
+				if ((i + j) % 2 == 0 && s.charAt(j) == 'F') ans++;
 			}
 		}
 		
 		System.out.println(ans);
 	}
-
 }
