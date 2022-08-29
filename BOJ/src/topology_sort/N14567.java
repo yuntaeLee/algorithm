@@ -56,7 +56,6 @@ public class N14567 {
 			if (inDegree[i] == 0) {
 				q.offer(i);
 				ans[i] = 1;
-				
 			}
 		}
 		
