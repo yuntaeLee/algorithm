@@ -46,8 +46,10 @@ public class N2170 {
 			int end = points[idx].end;
 			
 			while (++idx < N) {
-				if (points[idx].start <= end) end = Math.max(end, points[idx].end);
-				else break;
+				if (points[idx].start > end) break;
+				else {
+					end = Math.max(end, points[idx].end);
+				}
 			}
 			
 			dist += (end - start);
