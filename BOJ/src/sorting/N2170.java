@@ -55,5 +55,4 @@ public class N2170 {
 		
 		System.out.println(dist);
 	}
-
 }
