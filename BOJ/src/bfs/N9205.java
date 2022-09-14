@@ -86,5 +86,4 @@ public class N9205 {
 	static int getManhattan(Node n1, Node n2) {
 		return Math.abs(n1.x - n2.x) + Math.abs(n1.y - n2.y);
 	}
-
 }
