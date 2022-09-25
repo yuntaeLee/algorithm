@@ -42,7 +42,7 @@ public class N24444 {
 		}
 		
 		for (int i = 1; i <= N; i++) {
-			Collections.sort(graph.get(i));
+			Collections.sort(graph.get(i), Collections.reverseOrder());
 		}
 		
 		bfs(R);
