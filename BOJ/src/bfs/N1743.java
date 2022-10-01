@@ -85,5 +85,4 @@ public class N1743 {
 	static boolean outOfArea(int x, int y) {
 		return x <= 0 || y <= 0 || x > N || y > M;
 	}
-
 }
