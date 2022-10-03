@@ -5,7 +5,7 @@ import java.util.Queue;
 
 public class TruckCrossingTheBridge {
 	
-	public int solution(int bridge_length, int weight, int[] truck_weights) {
+	static int solution(int bridge_length, int weight, int[] truck_weights) {
 		int answer = 0;
 		int sum = 0;
 
