@@ -34,7 +34,6 @@ public class N6603 {
 		}
 		
 		System.out.println(sb);
-		
 	}
 	
 	static void bt(int start, int depth) {
