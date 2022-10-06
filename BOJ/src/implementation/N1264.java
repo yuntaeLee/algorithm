@@ -27,5 +27,4 @@ public class N1264 {
 		
 		System.out.println(sb);
 	}
-
 }
