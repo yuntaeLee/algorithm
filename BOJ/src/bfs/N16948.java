@@ -80,5 +80,4 @@ public class N16948 {
 	static boolean outOfArea(int r, int c) {
 		return r < 0 || c < 0 || r >= N || c >= N;
 	}
-
 }
