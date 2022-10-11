@@ -34,5 +34,4 @@ public class N2559 {
 		
 		System.out.println(ans);
 	}
-
 }
