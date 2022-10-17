@@ -52,5 +52,4 @@ public class N15655 {
 		
 		sb.append('\n');
  	}
-
 }
