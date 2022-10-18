@@ -57,7 +57,7 @@ public class N15664 {
 			if (!visited[i]) {
 				visited[i] = true;
 				ans[depth] = arr[i];
-				bt(i, depth + 1);
+				bt(i + 1, depth + 1);
 				visited[i] = false;
 			}
 		}
