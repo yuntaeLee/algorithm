@@ -13,8 +13,6 @@ public class N16922 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		n = Integer.parseInt(br.readLine());
-		arr = new int[]{1, 5, 10, 50};
-		
 		bt(0, 0, new boolean[1001], 0);
 		
 		System.out.println(ans);
