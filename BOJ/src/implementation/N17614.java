@@ -27,5 +27,4 @@ public class N17614 {
         
         System.out.println(answer);
 	}
-
 }
