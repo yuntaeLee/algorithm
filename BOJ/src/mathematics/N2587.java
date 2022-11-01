@@ -24,5 +24,4 @@ public class N2587 {
 		sb.append(sum / 5).append('\n').append(arr[2]);
 		System.out.println(sb);
 	}
-
 }
