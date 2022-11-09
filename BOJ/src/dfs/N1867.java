@@ -9,8 +9,8 @@ import java.util.StringTokenizer;
 
 public class N1867 {
 	
-	static int[] matched;
 	static boolean[] v;
+	static int[] matched;
 	static List<List<Integer>> edges;
 
 	public static void main(String[] args) throws IOException {
