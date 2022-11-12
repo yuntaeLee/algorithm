@@ -9,6 +9,7 @@ import java.util.StringTokenizer;
 
 public class N14676 {
 	
+	static boolean isLier;
 	static int n;
 	static int[] inDegree;
 	static int[] buildCnt;
@@ -44,8 +45,8 @@ public class N14676 {
 			int cur = Integer.parseInt(st.nextToken());
 			
 			if ((isBuild && inDegree[cur] != 0) || (!isBuild && buildCnt[cur] == 0)) {
-				System.out.println("Lier!");
-				return;
+				isLier = true;
+				break;
 			}
 			
 			if (isBuild) {
@@ -67,6 +68,11 @@ public class N14676 {
 					}
 				}
 			}
+		}
+		
+		if (isLier) {
+			System.out.println("Lier!");
+			return;
 		}
 		
 		System.out.println("King-God-Emperor");
