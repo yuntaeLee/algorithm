@@ -12,13 +12,15 @@ public class N3733 {
 		StringBuilder sb = new StringBuilder();
 		StringTokenizer st;
 		
-		String s;
-		while ((s = br.readLine()) != null) {
-			st = new StringTokenizer(s);
-			int a = Integer.parseInt(st.nextToken());
-			int b = Integer.parseInt(st.nextToken());
+		while (true) {
+			String input = br.readLine();
+			if (input == null) break;
 			
-			sb.append(b / (a + 1)).append('\n');
+			st =  new StringTokenizer(input);
+			int n = Integer.parseInt(st.nextToken());
+			int s = Integer.parseInt(st.nextToken());
+			
+			sb.append(s / (n + 1)).append('\n');
 		}
 			
 		System.out.println(sb);
