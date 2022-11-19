@@ -16,7 +16,6 @@ public class N1655 {
 		PriorityQueue<Integer> maxPq = new PriorityQueue<>(Comparator.reverseOrder());
 		
 		int N = Integer.parseInt(br.readLine());
-		
 		while (N-- > 0) {
 			int n = Integer.parseInt(br.readLine());
 			
