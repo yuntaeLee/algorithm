@@ -114,5 +114,4 @@ public class N6593 {
 	static boolean outOfBuilding(int l, int r, int c) {
 		return l < 0 || r < 0 || c < 0 || l >= L || r >= R || c >= C;
 	}
-	
 }
