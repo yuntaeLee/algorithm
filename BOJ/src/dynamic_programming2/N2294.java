@@ -14,7 +14,6 @@ public class N2294 {
 		int n = Integer.parseInt(st.nextToken());
 		int k = Integer.parseInt(st.nextToken());
 //		int[] coins = new int[n];
-		
 		boolean[] coins = new boolean[k + 1];
 		int[] dp = new int[k + 1];
 		
