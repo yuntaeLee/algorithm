@@ -126,5 +126,4 @@ public class N3197 {
 	static boolean outOfMap(int x, int y) {
 		return x < 0 || y < 0 || x >= R || y >= C;
 	}
-	
 }
