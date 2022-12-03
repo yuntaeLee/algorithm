@@ -20,4 +20,5 @@ public class N6810 {
 		sb.append("The 1-3-sum is ").append(ans);
 		System.out.println(sb);
 	}
+	
 }
