@@ -6,7 +6,7 @@ import java.util.LinkedHashSet;
 public class Factorization {
 
 	public static void main(String[] args) {
-		solution(420);
+		System.out.println(Arrays.toString(solution(420)));
 	}
 
 	static int[] solution(int n) {
