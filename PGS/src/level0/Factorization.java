@@ -6,7 +6,18 @@ import java.util.LinkedHashSet;
 public class Factorization {
 
 	public static void main(String[] args) {
-		System.out.println(Arrays.toString(solution(420)));
+		int[] input = solution(420);
+		int[] answer = {2, 3, 5, 7};
+		
+		boolean result = true;
+		for (int i = 0; i < answer.length; i++) {
+			if (input[i] != answer[i]) {
+				result = false;
+				break;
+			}
+		}
+		
+		System.out.println(result ? "Success" : "Fail");
 	}
 
 	static int[] solution(int n) {
