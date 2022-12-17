@@ -15,7 +15,7 @@ public class SumOfConsecutiveNumbers {
         int start = (total - check) / num + 1;
         
         for (int i = 0; i < num; i++) {
-                answer[i] = start + i ;
+            answer[i] = start + i ;
         }
         
         return answer;
