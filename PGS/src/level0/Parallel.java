@@ -6,8 +6,7 @@ import java.util.Set;
 public class Parallel {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
 	}
 	
     static int solution(int[][] dots) {
@@ -24,5 +23,4 @@ public class Parallel {
         
         return 0;
     }
-
 }
