@@ -20,5 +20,4 @@ public class TheNearestIdenticalLetter {
         
         return answer;
     }
-
 }
