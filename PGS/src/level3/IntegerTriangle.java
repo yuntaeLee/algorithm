@@ -3,7 +3,6 @@ package level3;
 public class IntegerTriangle {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 	}
 	
@@ -26,5 +25,4 @@ public class IntegerTriangle {
         
         return answer;
     }
-
 }
