@@ -38,5 +38,4 @@ public class TravelRoute {
         
         return false;
     }
-
 }
