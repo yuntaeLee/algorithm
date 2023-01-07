@@ -28,4 +28,5 @@ public class ExpressionOfNumber {
         
         return answer + 1;
     }
+    
 }
