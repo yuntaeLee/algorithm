@@ -1,11 +1,15 @@
 package level2;
 
-import java.util.Arrays;
-
 public class RepeatBinaryConversion {
 
 	public static void main(String[] args) {
-		System.out.println(Arrays.toString((solution("110010101001"))));
+		int cycle = 3;
+		int zero = 8;
+		
+		String input = "110010101001";
+		int[] result = solution(input);
+		
+		System.out.println(cycle == result[0] && zero == result[1]);
 	}
 
     static int[] solution(String s) {
