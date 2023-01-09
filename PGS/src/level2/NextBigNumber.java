@@ -3,7 +3,9 @@ package level2;
 public class NextBigNumber {
 
 	public static void main(String[] args) {
-		System.out.println(solution(15));
+		int input = 15;
+		int result = 23;
+		System.out.println(result == solution(input));
 	}
 	
     static int solution(int n) {
