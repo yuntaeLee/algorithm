@@ -3,11 +3,15 @@ package level2;
 public class Carpet {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int brown = 10;
+		int yellow = 2;
+		
+		int[] expect = {4, 3};
+		int[] result = solution(brown, yellow);
+		System.out.println((expect[0] == result[0]) && (expect[1] == result[1]));
 	}
 	
-	public int[] solution(int brown, int yellow) {
+	static int[] solution(int brown, int yellow) {
         int[] answer = new int[2];
         int sum = brown + yellow;
         
