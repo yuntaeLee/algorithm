@@ -34,7 +34,10 @@ public class VisitedLength {
 	static int[] d = {1, 0, -1, 0, 1};
 
 	public static void main(String[] args) {
-		System.out.println(solution("LULLLLLLU"));
+		String input = "LULLLLLLU";
+		int result = 7;
+		
+		System.out.println(result == solution(input));
 	}
 	
     static int solution(String dirs) {
