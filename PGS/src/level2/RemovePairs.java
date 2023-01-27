@@ -5,7 +5,10 @@ import java.util.Stack;
 public class RemovePairs {
 
 	public static void main(String[] args) {
-		System.out.println(solution("baabaa"));
+		String input = "baabaa";
+		int result = 1;
+		
+		System.out.println(result == solution(input));
 	}
 	
 	static int solution(String s) {
