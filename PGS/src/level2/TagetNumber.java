@@ -3,7 +3,7 @@ package level2;
 public class TagetNumber {
 	
 	static int answer;
-    static int N;
+	static int N;
 
 	public static void main(String[] args) {
 		int[] numbers = {1, 1, 1, 1, 1};
@@ -16,15 +16,15 @@ public class TagetNumber {
 	}
 	
 	static int dfs(int depth, int sum, int[] numbers, int target) {
-        if (depth == N) {
-            if (sum == target) {
-                answer++;
-                return 1;
-            }
-            
-            return 0;
-        }    
+		if (depth == N) {
+		    if (sum == target) {
+			answer++;
+			return 1;
+		    }
+
+		    return 0;
+		}    
         
-        return dfs(depth + 1, sum + numbers[depth], numbers, target) + dfs(depth + 1, sum - numbers[depth], numbers, target);
-    }
+        	return dfs(depth + 1, sum + numbers[depth], numbers, target) + dfs(depth + 1, sum - numbers[depth], numbers, target);
+	}
 }
