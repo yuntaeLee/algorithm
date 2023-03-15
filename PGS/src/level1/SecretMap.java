@@ -2,13 +2,24 @@ package level1;
 
 public class SecretMap {
 
-	public static void main(String[] args) {
-		int[] arr1 = {9, 20, 28, 18, 11};
-		int[] arr2 = {30, 1, 21, 17, 28};
-		int n = 5;
+    public static void main(String[] args) {
+        int[] arr1 = {9, 20, 28, 18, 11};
+        int[] arr2 = {30, 1, 21, 17, 28};
+        int n = 5;
 		
-		solution(5, arr1, arr2);
-	}
+        String[] result = {"#####", "# # #", "### #", "#  ##", "#####"};
+        String[] answer = solution(5, arr1, arr2);
+		
+        boolean isSuccess = true;
+        for (int i = 0; i < n; i++) {
+            if (!result[i].equals(answer[i])) {
+                isSuccess = false;
+                break;
+            }
+        }
+		
+        System.out.println(isSuccess);
+    }
 
     static String[] solution(int n, int[] arr1, int[] arr2) {
         String[] answer = new String[n];
