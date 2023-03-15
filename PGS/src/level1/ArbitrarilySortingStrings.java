@@ -10,11 +10,11 @@ public class ArbitrarilySortingStrings {
 		String[] strings = {"sun", "bed", "car"};
 		String[] result = {"car", "bed", "sun"};
 		
-		String[] solution = solution(strings, 1);
+		String[] answer = solution(strings, 1);
 		
 		boolean isSuccess = true;
 		for (int i = 0; i < result.length; i++) {
-			if (!result[i].equals(solution[i])) {
+			if (!result[i].equals(answer[i])) {
 				isSuccess = false;
 				break;
 			}
