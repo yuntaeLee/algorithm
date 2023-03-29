@@ -5,7 +5,6 @@ public class FoodFighterCompetition {
 	public static void main(String[] args) {
 		int[] food = {1, 3, 4, 6};
 		String result = "1223330333221";
-		
 		System.out.println(result.equals(solution(food)));
 	}
 	
