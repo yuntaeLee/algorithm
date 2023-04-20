@@ -1,5 +1,12 @@
 package level3;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class BestAlbum {
 
     static class Music implements Comparable<Music> {
@@ -24,7 +31,11 @@ public class BestAlbum {
     }
     
     public static void main(String[] args) {
+        String[] genres = {"classic", "pop", "classic", "classic", "pop"};
+        int[] plays = {500, 600, 150, 800, 2500};
         
+        int[] result = {4, 1, 3, 0};
+        System.out.println(Arrays.equals(result, solution(genres, plays)));
     }
 
     static int[] solution(String[] genres, int[] plays) {
@@ -70,6 +81,4 @@ public class BestAlbum {
         
         return answer;
     }
-
-    
 }
