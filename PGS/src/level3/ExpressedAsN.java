@@ -27,7 +27,7 @@ public class ExpressedAsN {
         for (int i = 2; i < 9; i++) {
             Set<Integer> countSet = countList.get(i);
             
-            for (int j = 1; j <= i; j++) {
+            for (int j = 1; j < i + 1; j++) {
                 Set<Integer> preSet = countList.get(j);
                 Set<Integer> postSet = countList.get(i - j);
                 
