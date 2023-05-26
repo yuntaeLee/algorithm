@@ -80,7 +80,9 @@ public class N2307 {
         while (!pq.isEmpty()) {
             Node cur = pq.poll();
 
-            if (cur.v == N) break;
+            if (cur.v == N) {
+                return dist[N];
+            }
 
             if (cur.cost > dist[cur.v]) continue;
 
@@ -98,6 +100,6 @@ public class N2307 {
             }
         }
 
-        return dist[N];
+        return INF;
     }
 }
