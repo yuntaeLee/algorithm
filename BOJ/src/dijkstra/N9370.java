@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -30,6 +29,7 @@ public class N9370 {
     static final int INF = 100000002;
 
     static int n;
+    static int[] dist;
     static List<List<Node>> graph;
     
     public static void main(String[] args) throws Exception {
@@ -68,42 +68,38 @@ public class N9370 {
                 graph.get(b).add(new Node(a, d));
             }
 
-            List<Integer> result = new ArrayList<>();
+            Queue<Integer> result = new PriorityQueue<>();
             for (int i = 0; i < t; i++) {
-                int x = Integer.parseInt(br.readLine());
-                if (dijkstra(s, x) % 2 == 1) {
-                    result.add(x);
+                result.offer(Integer.parseInt(br.readLine()));
+            }
+
+            dijkstra(s);
+
+            while (!result.isEmpty()) {
+                int x = result.poll();
+                if (dist[x] % 2 == 1) {
+                    sb.append(x).append(' ');
                 }
             }
 
-            Collections.sort(result);
-            for (int i = 0; i < result.size(); i++) {
-                sb.append(result.get(i)).append(' ');
-            }
             sb.append('\n');
         }
 
         System.out.println(sb);
     }
 
-    static int dijkstra(int start, int end) {
+    static void dijkstra(int start) {
         Queue<Node> pq = new PriorityQueue<>();
         pq.offer(new Node(start, 0));
 
-        int[] dist = new int[n + 1];
+        dist = new int[n + 1];
         Arrays.fill(dist, INF);
         dist[start] = 0;
 
         while (!pq.isEmpty()) {
             Node cur = pq.poll();
 
-            if (cur.v == end) {
-                return dist[cur.v];
-            }
-
-            if (cur.cost > dist[cur.v]) {
-                continue;
-            }
+            if (cur.cost > dist[cur.v]) continue;
 
             for (Node next : graph.get(cur.v)) {
                 if (dist[next.v] > dist[cur.v] + next.cost) {
@@ -112,7 +108,5 @@ public class N9370 {
                 }
             }
         }
-
-        return INF;
     }
 }
