@@ -1,7 +1,5 @@
 package level2;
 
-import sogang_contest.E;
-
 public class ExpectedTournamentTable {
     
     public static void main(String[] args) {
