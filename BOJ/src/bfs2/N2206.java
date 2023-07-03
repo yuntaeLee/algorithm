@@ -1,4 +1,4 @@
-package graph2;
+package bfs2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,14 +12,14 @@ public class N2206 {
 	static class Node {
 		int x;
 		int y;
-		int count;
-		int wall;
+		int dist;
+		int isDistroyed;
 		
-		Node(int x, int y, int count, int wall) {
+		Node(int x, int y, int dist, int isDistroyed) {
 			this.x = x;
 			this.y = y;
-			this.count = count;
-			this.wall = wall;
+			this.dist = dist;
+			this.isDistroyed = isDistroyed;
 		}
 	}
 	
@@ -29,8 +29,8 @@ public class N2206 {
 	static char[][] map;
 	static boolean[][][] visited;
 	
-	static int[] dx = {-1, 1, 0, 0};
-	static int[] dy = {0, 0, -1, 1};
+	static int[] dx = {-1, 0, 1, 0};
+	static int[] dy = {0, -1, 0, 1};
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -51,37 +51,40 @@ public class N2206 {
 	
 	static int bfs() {
 		Queue<Node> q = new LinkedList<>();
-		q.add(new Node(0, 0, 1, 0));
+		q.offer(new Node(0, 0, 1, 0));
 		visited[0][0][0] = true;
-		
+
 		while (!q.isEmpty()) {
 			Node cur = q.poll();
-			
+
 			if (cur.x == N - 1 && cur.y == M - 1) {
-				return cur.count;
+				return cur.dist;
 			}
-			
-			for (int i = 0; i < 4; i++) {
-				int nx = cur.x + dx[i];
-				int ny = cur.y + dy[i];
-				
-				if (nx < 0 || ny < 0 || nx >= N || ny >= M) continue;
-				
-				if (map[nx][ny] == '1' && cur.wall == 1) continue;
-				
-				int isBreak = cur.wall;
-				
-				if (map[nx][ny] == '1' && cur.wall == 0) {
-					isBreak = 1;
+
+			for (int d = 0; d < 4; d++) {
+				int nx = cur.x + dx[d];
+				int ny = cur.y + dy[d];
+
+				if (outOfMap(nx, ny)) continue;
+
+				if (map[nx][ny] == '1' && cur.isDistroyed == 1) continue;
+
+				int isDistroyed = cur.isDistroyed;
+				if (map[nx][ny] == '1' && cur.isDistroyed == 0) {
+					isDistroyed = 1;
 				}
-				
-				if (visited[isBreak][nx][ny]) continue;
-				
-				q.offer(new Node(nx, ny, cur.count + 1, isBreak));
-				visited[isBreak][nx][ny] = true;
+
+				if (!visited[isDistroyed][nx][ny]) {
+					q.offer(new Node(nx, ny, cur.dist + 1, isDistroyed));
+					visited[isDistroyed][nx][ny] = true;
+				}
 			}
 		}
 		
 		return -1;
+	}
+
+	static boolean outOfMap(int x, int y) {
+		return x < 0 || y < 0 || x >=N || y >= M;
 	}
 }
