@@ -28,7 +28,6 @@ public class N14503 {
 		int c = Integer.parseInt(st.nextToken());
 		int d = Integer.parseInt(st.nextToken());
 		
-		
 		for (int i = 0; i < N; i++) {
 			st = new StringTokenizer(br.readLine());
 			for (int j = 0; j < M; j++) {
@@ -80,5 +79,4 @@ public class N14503 {
 	static boolean isInArea(int r, int c) {
 		return r > 0 && c > 0 && r < N && c < M;
 	}
-
 }
