@@ -20,21 +20,22 @@ public class N1052 {
         if (n <= k) return 0;
 
         for (int i = 0; i < k - 1; i++) {
-
-            int exponent = 0;
-            while (Math.pow(2, exponent) < n) {
-               exponent++;
-            }
+            int exponent = getMaxExponentOfTwoLessThan(n);
             n -= Math.pow(2, exponent - 1);
 
             if (n == 0) return 0;
         }
 
+        int exponent = getMaxExponentOfTwoLessThan(n);
+        return (int) Math.pow(2, exponent) - n;
+    }
+
+    static int getMaxExponentOfTwoLessThan(int n) {
         int exponent = 0;
         while (Math.pow(2, exponent) < n) {
             exponent++;
         }
 
-        return (int) Math.pow(2, exponent) - n;
+        return exponent;
     }
 }
