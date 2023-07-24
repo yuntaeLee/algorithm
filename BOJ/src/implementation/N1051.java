@@ -12,32 +12,30 @@ public class N1051 {
 
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
-        int[][] map = new int[N][M];
+        int[][] board = new int[N][M];
 
         for (int i = 0; i < N; i++) {
             String s = br.readLine();
             for (int j = 0; j < M; j++) {
-                map[i][j] = s.charAt(j) - '0';
+                board[i][j] = s.charAt(j) - '0';
             }
         }
 
-        int len = Math.min(N, M);
+        System.out.println(solution(board, N, M));
+    }
 
-        while (len > 1) {
-            for (int i = 0; i <= N - len; i++) {
-                for (int j = 0; j <= M - len; j++) {
-                    int n = map[i][j];
-                    
-                    if (n == map[i][j + len - 1] && n == map[i + len - 1][j] && n == map[i + len - 1][j + len - 1]) {
-                        System.out.println(len * len);
-                        return;
+    static int solution(int[][] board, int n, int m) {
+        for (int len = Math.min(n, m) - 1; len > 0; len--) {
+            for (int i = 0; i < n - len; i++) {
+                for (int j = 0; j < m - len; j++) {
+                    int num = board[i][j];
+                    if (num == board[i][j + len] && num == board[i + len][j] && num == board[i + len][j + len]) {
+                        return (int) Math.pow(len + 1, 2);
                     }
                 }
             }
-
-            len--;
         }
 
-        System.out.println(1);
+        return 1;
     }
 }
