@@ -15,6 +15,7 @@ public class N1041 {
         long N = Long.parseLong(br.readLine());
         int[] dice = new int[6];
         long[] num = new long[3];
+        long answer = 0;
 
         st = new StringTokenizer(br.readLine());
         for (int i = 0; i < 6; i++) {
@@ -23,7 +24,6 @@ public class N1041 {
 
         if (N == 1) {
             Arrays.sort(dice);
-            int answer = 0;
             for (int i = 0; i < 5; i++) {
                 answer += dice[i];
             }
@@ -32,12 +32,6 @@ public class N1041 {
         }
 
         // 1면 -> 5(N - 2) ^ 2 + 4(N - 2)
-        // 2면 -> 8(N - 2) + 4
-        // 3면 -> 4
-        long answer = 0;
-        num[1] = 8 * (N - 2) + 4;
-        num[2] = 4;
-
         num[0] = 5 * (N - 2) * (N - 2) + 4 * (N - 2);
         long min = dice[0];
         for (int i = 0; i < 6; i++) {
@@ -45,6 +39,8 @@ public class N1041 {
         }
         answer += num[0] * min;
 
+        // 2면 -> 8(N - 2) + 4
+        num[1] = 8 * (N - 2) + 4;
         min = Long.MAX_VALUE;
         for (int i = 0; i < 5; i++) {
             for (int j = i + 1; j < 6; j++) {
@@ -55,7 +51,9 @@ public class N1041 {
         }
         answer += num[1] * min;
 
+        // 3면 -> 4
         min = 0;
+        num[2] = 4;
         for (int i = 0; i < 3; i++) {
             min += Math.min(dice[i], dice[5 - i]);
         }
