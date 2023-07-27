@@ -18,7 +18,6 @@ public class N1105 {
         if (L.length() == R.length()) {
             for (int i = 0; i < L.length(); i++) {
                 if (L.charAt(i) != R.charAt(i)) break;
-
                 if (L.charAt(i) == '8') count++;
             }
         }
