@@ -39,11 +39,11 @@ public class N1092 {
         int answer = 0;
         while (!box.isEmpty()) {
             int boxIdx = 0;
-            for (int i = 0; i < N;) {
+            for (int craneIdx = 0; craneIdx < N;) {
                 if (boxIdx == box.size()) break;
-                if (crane.get(i) >= box.get(boxIdx)) {
+                if (crane.get(craneIdx) >= box.get(boxIdx)) {
                     box.remove(boxIdx);
-                    i++;
+                    craneIdx++;
                     continue;
                 }
                 boxIdx++;
