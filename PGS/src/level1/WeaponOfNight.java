@@ -3,10 +3,17 @@ package level1;
 public class WeaponOfNight {
     
     public static void main(String[] args) {
-        
+        int number = 10;
+        int limit = 3;
+        int power = 2;
+
+        int actual = solution(number, limit, power);
+
+        int expected = 21;
+        System.out.println(actual == expected);
     }
 
-    public int solution(int number, int limit, int power) {
+    static int solution(int number, int limit, int power) {
         int answer = 0;
         for (int n = 1; n <= number; n++) {
             int count = getDivisorCount(n);
