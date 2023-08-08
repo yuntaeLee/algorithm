@@ -1,11 +1,22 @@
 package level1;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 public class FailureRate {
+
+    public static void main(String[] args) {
+        int N = 5;
+        int[] stages = {2, 1, 2, 6, 2, 4, 3, 3};
+
+        int[] actual = solution(N, stages);
+
+        int[] expected = {3, 4, 2, 1, 5};
+        System.out.println(Arrays.equals(actual, expected));
+    }
     
-    public int[] solution(int N, int[] stages) {
+    static int[] solution(int N, int[] stages) {
         Map<Integer, Double> map = new HashMap<>();
         for (int i = 1; i <= N; i++) {
             double total = 0;
