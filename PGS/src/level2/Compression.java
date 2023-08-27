@@ -5,11 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-<<<<<<< HEAD
-public class TertiaryCompression {
-=======
 public class Compression {
->>>>>>> f45db2b ([1차] 압축: HashMap)
 
     public static void main(String[] args) {
         String msg = "TOBEORNOTTOBEORTOBEORNOT";
