@@ -7,9 +7,10 @@ public class BaseStationConstruction {
         int[] stations = {4, 11};
         int w = 1;
 		
-        int result = 3;
-		
-        System.out.println(result == solution(11, stations, 1));
+        int actual = solution(n, stations, w);
+
+        int expected = 3;
+        System.out.println(actual == expected);
     }
 	
     static int solution(int n, int[] stations, int w) {
