@@ -1,6 +1,5 @@
 package level0;
 
-import java.util.Arrays;
 import java.util.LinkedHashSet;
 
 public class Factorization {
