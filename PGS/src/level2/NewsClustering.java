@@ -6,12 +6,12 @@ import java.util.List;
 public class NewsClustering {
     
     public static void main(String[] args) {
-        String str1 = "aa1+aa2";
-        String str2 = "AAAA12";
+        String str1 = "E=M*C^2";
+        String str2 = "e=m*c^2";
 
         int actual = solution(str1, str2);
 
-        int expected = 43690;
+        int expected = 65536;
         System.out.println(actual == expected);
     }
 
@@ -40,7 +40,7 @@ public class NewsClustering {
         List<String> answer=  new ArrayList<>();
         for (int i = 0; i < s.length() - 1; i++) {
             if (s.charAt(i) >= 'a' && s.charAt(i) <= 'z' && s.charAt(i + 1) >= 'a' && s.charAt(i + 1) <= 'z') {
-                answer.add(s.substring(i, i + 1));
+                answer.add(s.substring(i, i + 2));
             }
         }
 
