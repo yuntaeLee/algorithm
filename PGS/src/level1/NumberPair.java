@@ -1,8 +1,18 @@
 package level1;
 
 public class NumberPair {
+
+    public static void main(String[] args) {
+        String X = "12321";
+        String Y = "42531";
+
+        String actual = solution(X, Y);
+
+        String expected = "321";
+        System.out.println(actual.equals(expected));
+    }
     
-    public String solution(String X, String Y) {
+    static String solution(String X, String Y) {
         int[] temp = new int[10];
         int[] count = new int[10];
         
