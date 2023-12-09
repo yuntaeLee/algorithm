@@ -16,7 +16,6 @@ public class N2210 {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringBuilder sb;
 		StringTokenizer st;
 		
 		for (int i = 0; i < 5; i++) {
@@ -28,7 +27,6 @@ public class N2210 {
 		
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 5; j++) {
-				sb = new StringBuilder();
 				dfs(i, j, 0, map[i][j]);
 			}
 		}
