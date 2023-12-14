@@ -13,26 +13,21 @@ public class N19939 {
 
         int N = Integer.parseInt(st.nextToken());
         int K = Integer.parseInt(st.nextToken());
-        int answer = K - 1;
 
-        // 1 2 3 4 5 6 7 8 9
-        // 1 3 6 10 15 21 28 36 45
-        if (N < K) {
+        int answer = 0;
+        int min = (K + 1) * K / 2;
+
+        if (min > N) {
             System.out.println(-1);
             return;
         }
 
+        N -= min;
+        answer = K - 1;
         if (N % K != 0) {
-            
-        }
-    }
-
-    static int sigma(int n) {
-        int result = 0;
-        for (int i = 1; i <= n; i++) {
-            result += i;
+            answer++;
         }
 
-        return result;
+        System.out.println(answer);
     }
 }
