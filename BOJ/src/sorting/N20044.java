@@ -1,4 +1,4 @@
-package greedy;
+package sorting;
 
 import java.io.BufferedReader;
 import java.io.IOException;
