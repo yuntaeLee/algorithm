@@ -1,4 +1,4 @@
-package greedy2;
+package greedy;
 
 import java.io.BufferedReader;
 import java.io.IOException;
