@@ -20,10 +20,15 @@ public class N13413 {
             int bwCnt = 0;
 
             for (int i = 0; i < N; i++) {
-                if (s1.charAt(i) != s2.charAt(i)) {
-                    if (s1.charAt(i) == 'W') wbCnt++;
-                    else bwCnt++;
+                if (s1.charAt(i) == s2.charAt(i)) {
+                    continue;
                 }
+
+                if (s1.charAt(i) == 'W') {
+                    wbCnt++;
+                    continue;
+                }
+                bwCnt++;
             }
 
             sb.append(Math.max(wbCnt, bwCnt)).append('\n');
