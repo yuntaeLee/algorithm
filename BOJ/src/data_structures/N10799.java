@@ -22,16 +22,14 @@ public class N10799 {
                 continue;
             }
 
-            if (cur == ')') {
-                stk.pop();
-                
-                if (arr[i - 1] == '(') {
-                    answer += stk.size();
-                    continue;
-                }
-
-                answer++;
+            stk.pop();
+            
+            if (arr[i - 1] == '(') {
+                answer += stk.size();
+                continue;
             }
+
+            answer++;
         }
 
         System.out.println(answer);
